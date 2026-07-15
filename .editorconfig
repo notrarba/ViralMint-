@@ -1,0 +1,22 @@
+# EditorConfig — keeps indentation and line endings consistent across
+# every editor without each contributor needing to configure their own.
+# https://editorconfig.org
+
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+
+[*.py]
+indent_size = 4
+max_line_length = 120
+
+[*.{js,jsx,ts,tsx,json,html,css,yml,yaml,md}]
+indent_size = 2
+
+[Makefile]
+indent_style = tab

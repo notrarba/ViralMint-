@@ -1,0 +1,63 @@
+# Project metadata + tool configuration. Used by ruff (lint), pytest
+# (tests), and any future build tooling. The package itself isn't
+# installed via pip install -e .; ViralMint runs directly from source.
+
+[project]
+name = "viralmint"
+version = "1.0.0"
+description = "Open-source viral content pipeline — scout, analyze, generate, publish."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-only" }
+authors = [
+  { name = "ViralMint Contributors" },
+]
+keywords = [
+  "ai",
+  "video",
+  "content-creation",
+  "youtube",
+  "tiktok",
+  "whisper",
+  "yt-dlp",
+  "ffmpeg",
+  "self-hosted",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Video",
+]
+
+[project.urls]
+Homepage = "https://viralmint.net"
+Repository = "https://github.com/openclaw-easy/ViralMint"
+Issues = "https://github.com/openclaw-easy/ViralMint/issues"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = [
+  "venv",
+  ".venv",
+  "frontend/node_modules",
+  "storage",
+]
+
+[tool.ruff.lint]
+# Conservative ruleset matching what CI enforces today (E9/F63/F7/F82 —
+# syntax errors and unused imports). Tighten over time without
+# breaking existing PRs.
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+filterwarnings = [
+  "ignore::DeprecationWarning",
+]

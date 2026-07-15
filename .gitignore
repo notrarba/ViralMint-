@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.venv/
+venv*/
+
+# Environment
+.env
+
+# Database
+viralmint.db
+viralmint.db-wal
+viralmint.db-shm
+
+# Storage
+storage/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Serverless
+.serverless/
+.esbuild/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+# IDE / tooling
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+.DS_Store
+
+# Build artifacts
+*.log
+*.pid
+
+# Desktop bundle outputs (PyInstaller + vendored binaries fetched at build time)
+desktop/scripts/vendor/
+desktop/dist/
+desktop/release/
+
+# macOS Finder cruft from unzipped archives
+__MACOSX/
+.AppleDouble
+.LSOverride
